@@ -7,11 +7,22 @@
   <style>
     body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; background: #000; }
     iframe { width: 100%; height: 100%; border: none; display: block; }
-    /* Ẩn nút watermark chỉnh sửa của Base44 */
-    iframe + div, [class*="base44-badge"], [id*="base44"] { display: none !important; }
+    
+    /* Tạo một lớp phủ màu đen (hoặc trùng màu nền góc web) che đúng vào vị trí nút Edit with Base44 */
+    .watermark-blocker {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      width: 140px;
+      height: 45px;
+      background: #121212; /* Khớp với màu nền giao diện phía dưới góc phải */
+      z-index: 999999;
+      pointer-events: none; /* Giúp vẫn bấm xuyên qua được nếu cần */
+    }
   </style>
 </head>
 <body>
   <iframe src="https://albumhvlofmck.base44.app" allow="autoplay; fullscreen"></iframe>
+  <div class="watermark-blocker"></div>
 </body>
 </html>
