@@ -8,16 +8,16 @@
     body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; background: #000; }
     iframe { width: 100%; height: 100%; border: none; display: block; }
     
-    /* Tạo một lớp phủ màu đen (hoặc trùng màu nền góc web) che đúng vào vị trí nút Edit with Base44 */
+    /* Khung che phủ mở rộng ôm trọn nút Edit with Base44 */
     .watermark-blocker {
       position: fixed;
-      bottom: 0;
-      right: 0;
-      width: 140px;
-      height: 45px;
-      background: #121212; /* Khớp với màu nền giao diện phía dưới góc phải */
-      z-index: 999999;
-      pointer-events: none; /* Giúp vẫn bấm xuyên qua được nếu cần */
+      bottom: 12px;
+      right: 12px;
+      width: 200px;
+      height: 60px;
+      background: #121212; /* Màu nền trùng khớp với góc giao diện Spotify tối */
+      z-index: 2147483647;
+      border-radius: 12px;
     }
   </style>
 </head>
